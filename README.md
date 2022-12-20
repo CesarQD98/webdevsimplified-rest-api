@@ -12,4 +12,4 @@ De acuerdo a lo explicado en el video, se puede observar la existencia de los si
 Por otro lado, se tienen los siguiente archivos:
 
 - **[server.js](server.js)**: Archivo con las importaciones en _CommonJS_ de `Express.js` y `Mongoose`
-- **[.env](.env)**: Archivo donde se guardan las configuraciones de entorno.
+- **.env**: Archivo donde se guardan las configuraciones de entorno. Con fines prácticos, se carga un archivo `.md` con el contenido de `.env`.
