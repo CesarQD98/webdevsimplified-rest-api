@@ -2,16 +2,16 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
-// Establece la conexión con la base de datos
-mongoose.connect(process.env.DATABASE_URL);
+// // Establece la conexión con la base de datos
+// mongoose.connect(process.env.DATABASE_URL);
 
-// Lo siguiente solo realiza un check si se tiene conexión a la base de datos!
-const db = mongoose.connection;
+// // Lo siguiente solo realiza un check si se tiene conexión a la base de datos!
+// const db = mongoose.connection;
 
-db.on("error", (error) => console.error(error));
-db.once("open", () => console.error("Connected to Database"));
+// db.on("error", (error) => console.error(error));
+// db.once("open", () => console.error("Connected to Database"));
 
 app.use(express.json());
 
@@ -19,4 +19,6 @@ const subscribersRouter = require("./routes/subscribers");
 
 app.use("/subscribers", subscribersRouter);
 
-app.listen(3000, () => console.log("Server started"));
+// app.listen(3000, () => console.log("Server started"));
+
+module.exports = app;
