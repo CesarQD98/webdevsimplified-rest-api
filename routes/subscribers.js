@@ -61,7 +61,7 @@ router.delete("/:id", getSubscriber, async (req, res) => {
   }
 });
 
-// Middleware, todas las rutas requieren de obtener el 'subscriber' en específico
+// Middleware, todas las rutas que requieren de obtener el 'subscriber' en específico
 async function getSubscriber(req, res, next) {
   let subscriber;
   try {
